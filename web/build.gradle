@@ -1,11 +1,11 @@
 apply plugin: "war"
-apply plugin: "jetty"
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
 
 dependencies {
    compile project(":utils")
    compile "javax.servlet:servlet-api:2.5"
 }
 
-httpPort = 8080
-stopPort = 9090
-stopKey = "stopKey"
+gretty {
+   httpPort = 8080
+}
